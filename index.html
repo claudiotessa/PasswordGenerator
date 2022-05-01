@@ -5,6 +5,49 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Password Generator</title>
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Karla:wght@800&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
     </head>
-    <body></body>
+    <body>
+        <div class="container">
+            <h1>
+                Generate a
+                <p>random password</p>
+            </h1>
+            <p id="subtitle">Never use an insecure password again.</p>
+            <div id="inputs">
+                <button onclick="generate()">
+                    <img src="images/icon.png" />Generate passwords
+                </button>
+                <div>
+                    Length
+                    <input
+                        type="number"
+                        min="8"
+                        max="16"
+                        value="8"
+                        id="length"
+                    />
+                </div>
+            </div>
+            <hr />
+            <p id="hint">click to copy</p>
+            <div id="outputs">
+                <input type="text" readonly id="textbox0" onclick="copy(0)" />
+                <input type="text" readonly id="textbox1" onclick="copy(1)" />
+                <input type="text" readonly id="textbox2" onclick="copy(2)" />
+                <input type="text" readonly id="textbox3" onclick="copy(3)" />
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
 </html>
